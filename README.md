@@ -12,7 +12,7 @@
 
 | Task          | Name                      | Skills                                |
 |:-------------:|:-------------------------:|:-------------------------------------:|
-| [0](task0/)   | Community of Practice     | Discord Server                        |
+| [0](task0/)   | -                         | Community of Practice, Discord Server |
 | [1](task1/)   | Getting Started           | Forensics                             |
 | [2](task2/)   | The hunt continues        | Network Forensics                     |
 | [3](task3/)   | Digging deeper            | Reverse Engineering                   |

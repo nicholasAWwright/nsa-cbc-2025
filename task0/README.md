@@ -4,36 +4,19 @@ As a participant in the Codebreaker Challenge, you are invited to join the New M
 
 To complete this task, first, join the Discord server. https://discord.gg/SWYCM5xr4N
 
-Once there, type 
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            /task0</span> 
-in the 
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            #bot-commands</span>
-channel. Follow the prompts and paste the answer the bot gives you below.
+Once there, type `/task0` in the `#bot-commands` channel. Follow the prompts and paste the answer the bot gives you below.
 
-Note: You must provide the bot with the email you used to register for the Challenge and the following token: 
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            REDACTED</span>
+Note: You must provide the bot with the email you used to register for the Challenge and the following token: `REDACTED`
 
-## Prompt:
+## Prompt
 
     Provide the answer the bot gives you
+
+## Solution
+
+This task simply required creating and/or registering for the Discord server using the token provided. 
+
+## Result
 
 <div align="center" 
      style="background-color: #dff0d8;
@@ -44,6 +27,7 @@ Note: You must provide the bot with the email you used to register for the Chall
             font-family: Roboto, Helvetica, Arial, sans-serif;
             font-size: 14px;
             line-height: 1.42857143;">
+
 Task Completed at Thu, 25 Sep 2025 00:04:55 GMT: 
 
 ---

@@ -67,4 +67,8 @@ channel:
 
 ---
 
+<div align="center">
+
 ![badge7.png](badge7.png)
+
+</div>
