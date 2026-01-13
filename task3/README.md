@@ -32,8 +32,6 @@ Metadata (System.map)
 Kernel Image (vmlinux)
 ```
 
-### Tooling
-
 We are given a memory dump along with the associated Linux kernel `vmlinux` and `System.map` symbol table, which indicate using a specialty tool, such as the open-source [Volatility 3](https://github.com/volatilityfoundation/volatility3) framework. This folder contains `pixi.toml` and `pixi.lock` files suitable for installing Volatility 3 and other Python tools using [pixi](https://pixi.prefix.dev/latest/) package manager. Run `pixi shell` to activate the environment and download the tools for the first time.
 
 We need a symbol table to use Volatility 3 and this can be generated from the given kernel image and system map. To generate the symbol table, use [dwarf2json](https://github.com/volatilityfoundation/dwarf2json). Clone and build this tool using:
@@ -48,8 +46,6 @@ Then generate the symbol map using `./dwarf2json linux --elf vmlinux --system-ma
 Alternatively, I also used [btf2json](https://github.com/vobst/btf2json) with success after patching one line of the output compared to `dwarf2json`. This symbol table also allowed me to successfully run the Volatility `linux.capabilities` tool, which failed with `dwarf2json`. This additional capability did not prove helpful, but was interesting nonetheless. Volatility will pull symbols from all available files by default. Both of these symbol outputs are included in the [symbols/](symbols/) folder and referenced in the commands given below.
 
 Other tools I attempted to use for this task were [Binwalk](https://github.com/ReFirmLabs/binwalk) and [bulk_extractor](https://github.com/simsong/bulk_extractor). 
-
-### Exploration
 
 Now that our tooling is setup, we can begin frantically running every available built-in Volatility plugin until something makes sense. Here is the logical retrospective of that process. For Volatility commands `-r pretty` and `-r csv` can be used to render the output in a more readable format or save to file for easier parsing.
 

@@ -7,16 +7,41 @@ We will have to figure out how to get into the same channel as the adversary. If
 You are tasked with gaining access to the same channel as the target. The only interface that you have is the chat interface in Mattermost!
 
 
-## Downloads:
+## Downloads
 
   - [Mattermost instance (volumes.tar.gz)](Downloads/volumes.tar.gz)
   - [User login (user.txt)](Downloads/user.txt)
 
-## Prompt:
+## Prompt
 
     Submit a series of commands, one per line, given to the Mattermost server which will allow you to gain access to a channel with the adversary.
 
+## Solution
 
+Create a Docker compose file to spin up a Mattermost server and Postgres database
+
+Create a Dockerfile to create malbot image
+
+Login to Postgres using DBeaver to view forum contents
+
+Test that !nego allows creating a private channel with 2 users and a mod that are in the channel !nego is called from
+
+See that the Admin is in only 1 private channel, the one discussing malicious access to US military
+
+Review malbot code to realize monkeypaw patch doesn't cover group msg
+
+Also, the code has a vulnerability that allows entering an existing private channel
+
+Note that the target private channel conveniently has all but 4 members already: yourself, 1 mod, and 2 others
+
+Create a group msg with those not in the target private channel
+
+Use !nego from the group msg to join the target channel
+
+Format the command into two lines to satisfy the grader
+
+
+## Result
 
 <div align="center" 
      style="background-color: #dff0d8;
