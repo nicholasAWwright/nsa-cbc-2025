@@ -62,4 +62,8 @@ Awesome job! We can now access the channel and are one step closer to removing t
 
 ---
 
+<div align="center">
+
 ![badge6.png](badge6.png)
+
+</div>

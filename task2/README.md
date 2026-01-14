@@ -17,7 +17,7 @@ DAFIN-SOC has provided a PCAP to analyze. Thoroughly evaluate the PCAP to identi
 
 Opening up the given PCAP in Wireshark, there is much to look at. 
 
-Using `Statistics > Conversations` and then selecting one of the tabs allows following a specific stream ID. Sort by Stream ID and then right click on each row to select `Apply as Filter > Selected > Filter on stream id` to more easily interpret the comunication hapenning between addresses. I took the following notes on suspicious stream IDs during my solve:
+Using `Statistics > Conversations` and then selecting one of the tabs allows following a specific stream ID. Sort by Stream ID and then right click on each row to select `Apply as Filter > Selected > Filter on stream id` to more easily interpret the comunication hapenning between addresses. I took the following notes on suspicious IPv4 stream IDs during my solve:
 ```
 Suspicious IPv4 streams
  2: 192.168.1.140, 172.30.1.5     (list/test FTP files)
