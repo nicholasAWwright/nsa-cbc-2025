@@ -18,11 +18,44 @@ You are tasked with gaining access to the same channel as the target. The only i
 
 ## Solution
 
-Create a Docker compose file to spin up a Mattermost server and Postgres database
+For this task we are given an entire (!) Mattermost database, python Mattermost bot code, and a username + password to login with. Since Mattermost is a messaging board with a GUI, we work with Claude AI, iteratively, to create a local Docker instance of Mattermost that can run each of the individual components in separate, connected containers:
+  - [PostgreSQL](https://www.postgresql.org/) database
+  - [Mattermost](https://github.com/mattermost/mattermost) server
+  - Mattermost [mmpy_bot](https://github.com/attzonko/mmpy_bot) Python bot
 
-Create a Dockerfile to create malbot image
+The default PostgreSQL port (5432) is used and the bot settings are defined in `bot.py`:
+```
+bot = Bot(
+    settings=Settings(
+        MATTERMOST_URL = os.environ.get("MATTERMOST_URL", "http://127.0.0.1"),
+        MATTERMOST_PORT = int(os.environ.get("MATTERMOST_PORT", 8065)),
+        BOT_TOKEN = os.environ.get("BOT_TOKEN"),
+        BOT_TEAM = os.environ.get("BOT_TEAM", "test_team"),
+        SSL_VERIFY = os.environ.get("SSL_VERIFY", "False") == "True",
+        RESPOND_CHANNEL_HELP=True,
+    ),
+    plugins=[SalesPlugin(), HelpPlugin(), OnboardingPlugin(),ManageChannelPlugin(),AdminPlugin()],
+)
+bot.run()
+```
 
-Login to Postgres using DBeaver to view forum contents
+First, the server and database are successfully stood up by running `docker compose up`. [DBeaver](https://dbeaver.io/) is utilized to connect to the database using the user and password in [docker-compose.yml](docker-compose.yml) (either Claude guessed correctly or []`pg_hba.conf`](https://www.postgresql.org/docs/9.1/auth-pg-hba-conf.html) is set permissively). After poking around a bit, we find the `useraccesstokens` table (under `Databases -> mattermost -> Schemas -> public -> Tables`) that includes the bot token for Malbot!
+
+We get to work on getting Malbot up and running and create a [Dockerfile](Dockerfile) for creating a custom Docker image with Python and the correct packages and permissions. From `bot.py`, a `-v` flag is added to run with debug level verbosity.
+
+With these files created and Docker containers orchestrated, we can connect (with [Chrome](https://www.google.com/chrome/) to be safe) to the Mattermost instance at `localhost:8065`. Select `View in Browser` and use the given username and password to login:
+  - username: `gleefulfalcon86`
+  - password: `XUNGbENqzQJGDUBm`
+
+Close the browser and reopen, or try manually, after login if redirection to `localhost:8065/malwarecentral/channels/public` is not automatic. Upon accessing this channel for the first time, immediately go to `Settings > Display > Theme` to change to dark mode.
+
+![Mattermost](mattermost.png)
+
+At this point, we would like to figure out which channel we need to join, who the adversary is, and what the vulnerabilities are in Malbot's code that will allow us to accomplish this.
+
+
+
+Review the database for `posts`, `users`, `channels`, and `channelmembers`.
 
 Test that !nego allows creating a private channel with 2 users and a mod that are in the channel !nego is called from
 
