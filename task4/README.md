@@ -100,61 +100,8 @@ Yo yo yo, no cap fr fr, walking into that Monday morning standup had me feeling 
 ```
 
 Searching for the string `/proc/self/status` leads to the following function that is looking for if the PID for `TracerPid` contained within `/proc/self/status` is equal to 0 or not. Non-zero indicates that there is an attached debugger PID which causes the program to return with a non-zero exit code: 
-```c++
-00403470    uint64_t sub_403470()
 
-00403493        void* fsbase
-00403493        int64_t rax = *(fsbase + 0x28)
-004034ad        FILE* stream = nullptr
-004034b6        int16_t delim = 9
-004034c5        char* lineptr = nullptr
-004034ce        uint64_t n = 0
-004034de        int32_t rbx_1
-004034de        char* lineptr_1
-004034de        
-004034de        if (sub_4056a0(&stream, "r", "/proc/self/status") == 0)
-004034fb            char* s
-004034fb            char* i
-004034fb            
-004034fb            do
-00403511                if (getline(&lineptr, &n, stream) == -1)
-00403511                    goto label_403513
-00403511                
-004034e8                s = lineptr
-004034f3                i = strstr(s, "TracerPid")
-004034fb            while (i == 0)
-004034fb            
-0040356b            if (strtok(s, &delim) == 0)
-0040356b                goto label_403513
-0040356b            
-00403572            char* rax_7 = strtok(s: nullptr, &delim)
-00403572            
-0040357a            if (rax_7 == 0)
-0040357a                goto label_403513
-0040357a            
-00403581            lineptr_1 = lineptr
-00403586            rbx_1.b = *rax_7 != 0x30
-004034de        else
-00403513        label_403513:
-00403513            lineptr_1 = lineptr
-00403518            rbx_1 = 1
-00403518        
-00403520        if (lineptr_1 != 0)
-00403522            free(ptr: lineptr_1)
-00403522        
-00403527        FILE* fp = stream
-00403527        
-0040352f        if (fp != 0)
-00403531            fclose(fp)
-00403531        
-0040353b        *(fsbase + 0x28)
-0040353b        
-00403544        if (rax == *(fsbase + 0x28))
-00403552            return zx.q(rbx_1)
-00403552        
-0040358b        __stack_chk_fail()
-0040358b        noreturn
-```
+![TracePid check function](tracer_pid.png)
 
 We can patch line 0x403586 to NOP using Binja to ensure that the check for ascii zero is never made.
 ```
