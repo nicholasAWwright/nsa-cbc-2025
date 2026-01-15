@@ -48,7 +48,6 @@ We also know that OpenSSL uses [PKCS#7 padding](https://en.wikipedia.org/wiki/Pa
 We should be able to break this encryption, but we need some (plaintext, ciphertext) pairs to do so.
 
 Looking at the PCAP IPv4 stream 34 from task 2 and the contents of the unpacked binary, we can piece together the message flow as follows:
-```
 1. Server -> Client: send RSA public key
 2. Client -> Server: send AES keys encrypted using RSA public key
 3. Server -> Client: KEY_RECEIVED
@@ -56,7 +55,7 @@ Looking at the PCAP IPv4 stream 34 from task 2 and the contents of the unpacked 
 5. Server -> Client: AES encrypted message 2 (REQCONN_OK)
 6. Client -> Server: AES encrypted message 3
 7. Server -> Client: AES encrypted message 4
-```
+
 
 Taking a close look at the raw contents of each PCAP message sheds some more light on possible plaintext ciphertext pairs. Note that each plaintext and ciphertext message starts with `0xdec0dec0ffee`:
 

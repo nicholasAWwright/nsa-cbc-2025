@@ -32,7 +32,7 @@ In another WSL Ubuntu shell, changing directories to `~/cbc2025/task1` now revea
 
 Scrolling through the folder and file listing, this sequence in `/etc/periodic/` stands out because the only file is a strangely named `mceruozsvw` that apparently runs once per day:
 
-```
+```sh
 /home/naww/cbc2025/task1/etc/periodic:
 total 28
 drwxr-xr-x.  7 root root 4096 Dec 31  1969 .
@@ -73,7 +73,7 @@ drwxr-xr-x. 7 root root 4096 Dec 31  1969 ..
 Let's look at the contents of this file:
 
 `sudo cat ~/cbc2025/task1/etc/periodic/daily/mceruozsvw`
-```
+```sh
 U=/a/f1b6f590ad57e57904e028ccb6bf7b25/xxyz
 P=20
 A=/app/www
@@ -82,7 +82,7 @@ A=/app/www
 It is unclear exactly what this means, but it seems like potentially a C2 server connection configuration with a user, password/period, and app URL. Let's get the SHA-1 hash and see if this is the indicated suspicious artifact:
 
 `sha1sum ~/cbc2025/task1/etc/periodic/daily/mceruozsvw`
-```
+```sh
 264352e3271d80e7ea777362353222201f614a55  /home/naww/cbc2025/task1/etc/periodic/daily/mceruozsvw
 ```
 

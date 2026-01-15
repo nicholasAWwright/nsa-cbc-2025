@@ -33,7 +33,7 @@ Suspicious IPv4 streams
 
 ### Stream 2
 This stream contains a listing of all of the files available on the FTP server:
-```
+```sh
 -rw-r--r--    1 122      124          9856 Aug 29 14:44 RFC2549.txt
 -rw-------    1 122      124           808 Aug 29 13:59 router1_backup.config
 -rw-------    1 122      124          1339 Aug 29 14:05 router2_backup.config
@@ -250,7 +250,7 @@ In the end, staring at the PCAP for so long proved useful later when it was requ
 In hindsight, I could have recognized from task 1 that the suspicious machine was running Alpine Linux, an unlikely scenario for a development machine, but very likely for a router.
 
 I believe the correct way to solve this task was to find packet #2025 (coincidence?):
-```
+```python
 Source:      192.168.3.254:53  
 Destination: 192.168.3.229:37197	
 Protocol:    DNS	

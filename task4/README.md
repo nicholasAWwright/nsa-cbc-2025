@@ -100,7 +100,7 @@ Yo yo yo, no cap fr fr, walking into that Monday morning standup had me feeling 
 ```
 
 Searching for the string `/proc/self/status` leads to the following function that is looking for if the PID for `TracerPid` contained within `/proc/self/status` is equal to 0 or not. Non-zero indicates that there is an attached debugger PID which causes the program to return with a non-zero exit code: 
-```
+```c++
 00403470    uint64_t sub_403470()
 
 00403493        void* fsbase
