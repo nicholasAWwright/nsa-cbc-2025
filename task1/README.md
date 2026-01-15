@@ -102,26 +102,9 @@ After further examination during this writeup, it is clear that the filesystem i
 
 ## Result
 
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
-Task Completed at Thu, 25 Sep 2025 00:50:39 GMT: 
-
----
-
-Great job finding that artifact! Let's report what we found to DAFIN-SOC leadership.
-
-</div>
-
----
-
 <div align="center">
+
+![Task 1 result](result1.png)
 
 ![badge1.png](badge1.png)
 

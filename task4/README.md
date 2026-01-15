@@ -259,26 +259,9 @@ This indicates that the malware is very narrowly and specifically targeting a ma
 
 ## Result
 
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
-Task Completed at Sat, 27 Dec 2025 17:12:09 GMT: 
-
----
-
-Superb work unpacking and analyzing that Malware!
-
-</div>
-
----
-
 <div align="center">
+
+![Task 4 result](result4.png)
 
 ![badge4.png](badge4.png)
 

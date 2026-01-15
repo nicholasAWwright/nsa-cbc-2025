@@ -249,26 +249,9 @@ However, the grader is fickle and we must divide the answer into two lines, even
 
 ## Result
 
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
-Task Completed at Thu, 01 Jan 2026 23:55:24 GMT: 
-
----
-
-Awesome job! We can now access the channel and are one step closer to removing this threat.
-
-</div>
-
----
-
 <div align="center">
+
+![Task 6 result](result6.png)
 
 ![badge6.png](badge6.png)
 

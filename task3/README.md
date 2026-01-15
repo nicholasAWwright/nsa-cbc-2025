@@ -318,27 +318,9 @@ Task 3 was the most time consuming task of the challenge for me. There were many
 
 ## Result
 
-
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
-Task Completed at Mon, 15 Dec 2025 02:38:41 GMT: 
-
----
-
-Good work! Let's head back to NSA headquarters to continue with this analysis.
-
-</div>
-
----
-
 <div align="center">
+
+![Task 3 result](result3.png)
 
 ![badge3.png](badge3.png)
 

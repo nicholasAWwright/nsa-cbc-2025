@@ -18,20 +18,8 @@ This task simply required creating and/or registering for the Discord server usi
 
 ## Result
 
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
+<div align="center">
 
-Task Completed at Thu, 25 Sep 2025 00:04:55 GMT: 
-
----
-
-Welcome to the community! Remember, challenge tasks must be done solo and NO SPOILERS! Use 'Get Help' for a direct line to NSA.
+![Task 0 result](result0.png)
 
 </div>

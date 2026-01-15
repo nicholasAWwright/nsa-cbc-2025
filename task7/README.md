@@ -75,56 +75,9 @@ Open-ended prompt led to consideration of what constituted "exploits the device"
 
 ## Result
 
-<div align="center" 
-     style="background-color: #dff0d8;
-            border-color: #d6e9c6;
-            color: #3c763d;
-            padding: 15px;
-            border-radius: 4px;
-            font-family: Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
-            line-height: 1.42857143;">
-Task Completed at Sat, 10 Jan 2026 16:47:36 GMT:
-
----
-
-With full access to the device we now have ull visibility into this threat actor's entire infrastructure and capabilities. The US Military has everything they need to take decisive action against this threat. The security configurations of DoD networks worldwide are updated to guard against the exploited vulnerabilities, the adversary's infrastructure is destroyed, and the entire team of threat actors are identified. DIRNSA briefed the president on your work and how you enabled the mitigation of this threat. Great job!
-
-Through dedication, skill, and teamwork; NSA guaranteed the protection of the US Militaries advantage in the cyber domian.
-
----
-
-You may join a <b>special 
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            #2025-solvers</span>
-Discord channel</b>. Be aware that other players will see your membership. Paste the following into the 
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            #bot-commands</span> 
-channel:
-<span style="padding: 2px 4px;
-            font-size: 90%;
-            color: #c7254e;
-            background-color: #f9f2f4;
-            border-radius: 4px;
-            font-family: Menlo, Monaco, Consolas, Courier New, monospace;">
-            /solver token:REDACTED</span> 
-
-
-</div>
-
----
-
 <div align="center">
+
+![Task 7 result](result7.png)
 
 ![badge7.png](badge7.png)
 
