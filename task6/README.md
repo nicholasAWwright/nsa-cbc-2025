@@ -240,6 +240,8 @@ However, the grader is fickle and we must divide the answer into two lines, even
 !nego channel70148 awedcamel54 blissfulsalami85 mod_solidmuesli16
 ```
 
+![In the target channel with adversary](success.png)
+
 
 ### Notes
 
