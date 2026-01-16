@@ -2,7 +2,10 @@
 
 <div align="center">
 
-![alt text](210802-D-IM742-1234.avif)
+![NSA Codebreaker Challenge Banner](210802-D-IM742-1234.avif)
+
+![2025 Solver Statistics](solve_stats.png)<br>
+Scraper credit to: https://github.com/code-zm/cbc_scraper
 
 </div>
 
