@@ -4,7 +4,8 @@
 
 ![NSA Codebreaker Challenge Banner](210802-D-IM742-1234.avif)
 
-![2025 Solver Statistics](solve_stats.png)<br>
+![2025 Solver Statistics](solve_stats.png)
+<br>
 Scraper credit to: https://github.com/code-zm/cbc_scraper
 
 </div>
@@ -51,3 +52,11 @@ Scraper credit to: https://github.com/code-zm/cbc_scraper
 >
 >Any similarities to real persons, entities, or events is coincidental. 
 
+# Awards
+<div align="center">
+
+![NSA Award Package](nsa_awards.jpg)
+
+![Medallion Reverse](medallion.jpg)
+
+</div>
