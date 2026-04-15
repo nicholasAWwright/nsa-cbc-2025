@@ -152,10 +152,6 @@ We can proceed with cracking the encryption keys in two ways:
 2. Use a [meet-in-the-middle attack](https://en.wikipedia.org/wiki/Meet-in-the-middle_attack) one of the (p,c) pairs. This attack stores each possible value of key 1 with its singly encrypted intermediate ciphertext value in a hash table during phase one for lookup in phase two. During phase 2, the final ciphertext is singly decrypted for each possible value of key 2 and then checked against the hash table. If there is a match, then both key 1 and key 2 have been found.
 
 
-Included [decrypt.py](decrypt.py) is a [Claude AI](https://claude.ai) implemented Python solver that can solve the problem using either method:
-  - `python decrypt.py --mode padding` for a sequential attack on padding -> key2 -> plaintext -> key1
-  - `python decrypt.py --mode mitm` for a meet-in-the-middle attack that stores each possible ciphertext for each possible key1 and then looks each decryption of key2 up in the key1 dict
-
 Included is a [Claude AI](https://claude.ai) implemented [Rust](https://rust-lang.org/) solver that can solve the problem using either method in a short amount of time on a desktop PC. (Both [Windows PE](decrypt_rust.exe) and [Linux ELF](decrypt_rust) executables included, along with source code)
   - `./decrypt padding --padding-k2 16f3bc52e4473dc41c730f6dc9830a6a --padding-k1k2 bd2ad9e26c1747047a0abfe0e567aa36` Runs in ~3.5s
   - `./decrypt mitm --plaintext dec0dec0ffee524551434f4e4e030303 --ciphertext d864ca7dffe42aba9374c36153f271a5` Runs in ~22s
